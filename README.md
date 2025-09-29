@@ -1,86 +1,107 @@
-🎲 Prueba de Números Aleatorios (PHP + JS)
+# 🎲 Prueba de Números Aleatorios (PHP + JS)
 
-Este proyecto implementa dos pruebas estadísticas para verificar la uniformidad de números pseudoaleatorios en [0,1]:
+Este proyecto implementa dos pruebas estadísticas para verificar la **uniformidad de números pseudoaleatorios en [0,1]**:
 
-Prueba de Promedios (Z):
+✨ **Prueba de Promedios (Z):**  
+- Contrasta si la media muestral `r̄` ≈ 0.5.  
+- Usa distribución **Normal estándar**, dos colas.
 
-Contrasta si la media muestral r̄ ≈ 0.5.
+📊 **Prueba de Frecuencias (χ²):**  
+- Divide el intervalo [0,1] en `K` subintervalos iguales.  
+- Compara frecuencias observadas vs. esperadas.  
+- Usa distribución **Chi-cuadrado**, cola derecha.
 
-Usa distribución Normal estándar, dos colas.
+---
 
-Prueba de Frecuencias (χ²):
+## 📂 Estructura del Proyecto
 
-Divide el intervalo [0,1] en K subintervalos iguales.
+    📁 SIMULACION
+    ├── 📁 app
+    │ └── 📁 assets
+    │ ├── 📁 css
+    │ │ └── style.css
+    │ └── 📁 js
+    │ └── index.js
+    │
+    ├── 📁 controller
+    │ └── controller.php
+    │
+    ├── index.php
+    ├── README.md
+    ├── 📊 Tabla Normal Estandar.xlsx
+    └── 📊 tabla_chi_cuadrado.xlsx
 
-Compara frecuencias observadas vs. esperadas.
 
-Usa distribución Chi-cuadrado, cola derecha.
+---
 
-🚀 Estructura del proyecto
+## ⚙️ Requisitos
 
-controller.php → lógica estadística y respuestas JSON.
+- 🐘 **PHP 7+** (recomendado PHP 7.4 o superior).  
+- 🖥️ **Servidor local** (XAMPP, Laragon, WAMP, etc.).  
+- 🌐 **Navegador moderno** con soporte `fetch`.
 
-index.js → control de formulario, envío AJAX y render de resultados.
+---
 
-index.html → interfaz gráfica (inputs, resultados, estilos).
+## 🚀 Instalación en Localhost
 
-README.md → documentación.
+### 🔹 1. Descargar o Clonar el Proyecto
 
-⚙️ Requisitos
-
-PHP 7+ (se recomienda PHP 7.4 o superior).
-
-Servidor local (XAMPP, Laragon, WAMP, etc.).
-
-Navegador moderno con soporte fetch.
-
-🖥️ Instalación y uso en Localhost
-1. Descargar o clonar el proyecto
-git clone https://github.com/tuusuario/prueba-numeros-aleatorios.git
+- git clone https://github.com/Gabotox/simulacion.git
 
 
 O descarga el ZIP y descomprímelo en tu carpeta de proyectos.
 
-2. Copiar en el directorio del servidor
+---
 
-Si usas XAMPP: mueve la carpeta al directorio htdocs/.
+### 🔹 2. Mover al Directorio del Servidor
 
-C:\xampp\htdocs\prueba-numeros-aleatorios
+- **XAMPP:**  
+
+---  📁 htdocs
 
 
-Si usas Laragon: muévela a C:\laragon\www\.
+### 🔹 3. Iniciar el Servidor
 
-Si usas WAMP: muévela a C:\wamp64\www\.
+1. Abre el **Panel de Control** (XAMPP / Laragon / WAMP).  
+2. Activa **Apache** (MySQL no es necesario aquí).  
 
-3. Iniciar el servidor
+---
 
-Abre el Panel de Control de tu servidor (XAMPP, Laragon, etc.).
+### 🔹 4. Abrir en el Navegador
 
-Activa Apache (y MySQL si lo necesitas, aunque aquí no se usa).
+👉 Ve a:  
 
-4. Acceder en el navegador
 
-Entra a la siguiente URL:
+- http://localhost/Simulacion/index.php
 
-http://localhost/prueba-numeros-aleatorios/index.html
 
-5. Uso
 
-Seleccionar la prueba (Promedios o Frecuencias).
 
-Ingresar valores rᵢ en [0,1] con 2 decimales.
+---
 
-Presionar Calcular.
+## 🧪 Ejemplo de Uso
 
-Visualizar el resultado y detalle paso a paso.
+1. Selecciona la prueba (**Promedios** o **Frecuencias**).  
+2. Ingresa valores `rᵢ` en [0,1] con **2 decimales**.  
+3. Presiona **Calcular**.  
+4. Visualiza el resultado y un **detalle paso a paso**.  
 
-📖 Notas
+💡 **Ejemplo de entrada:**  
 
-Para frecuencias, se recomienda que la frecuencia esperada E = n/K ≥ 5.
 
-La tabla crítica de χ² incluida soporta df ≤ 5 y α ∈ {0.10, 0.05, 0.01}.
-Puede ampliarse fácilmente en controller.php.
+- 0.15, 0.23, 0.47, 0.51, 0.78, 0.95
 
-📜 Licencia
 
-MIT – Libre uso académico y educativo.
+---
+
+## 📖 Notas Importantes
+
+- Puedes **ampliar la tabla** fácilmente en `controller.php`.  
+
+---
+
+## 📜 Licencia
+
+📄 **MIT License** – Libre uso académico y educativo. 
+
+
