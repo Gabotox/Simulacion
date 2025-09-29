@@ -18,11 +18,10 @@ Este proyecto implementa dos pruebas estadísticas para verificar la **uniformid
     📁 SIMULACION
     ├── 📁 app
     │ └── 📁 assets
-    │ ├── 📁 css
-    │ │ └── style.css
-    │ └── 📁 js
-    │ └── index.js
-    │
+    │     ├── 📁 css
+    │     │ └── style.css
+    │     └── 📁 js
+    │       └── index.js
     ├── 📁 controller
     │ └── controller.php
     │
